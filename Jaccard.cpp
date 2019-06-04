@@ -58,109 +58,40 @@ string getStrCutByLength(string str, int maxLength){ // 잘라낼 문자열 및 
 
     return str;
 }
-//두 단어씩 쪼개서 vector에 저장하기
 
-//합집합과 교집합 구해서 유사도 저장
 int Jaccard::jaccard(string str1, string str2) {
     vector<string> strSet1;
     vector<string> strSet2;
     vector<string> unionSet;
+    vector<string> interSet;
 
     string temp;
+    cout << temp;
     for(int i=0;i<str1.length()/3 - 1;i++){
         temp = getStrCutByLength(str1.substr(i*3),2);
         strSet1.push_back(temp);
-        cout << temp << " ";
     }
 
     for(int i=0;i<str2.length()/3 - 1;i++){
         temp = getStrCutByLength(str2.substr(i*3),2);
         strSet2.push_back(temp);
-        cout << temp << " ";
     }
 
-    int unionNum = 0;     // 합집합 개수
-    int intersectionNum = 0;  // 교집합 개수
-
-    for (int i = 0; i < (int)str1.size(); i++) {
-        if (strSet1[i] != "") unionNum++; // str1의 원소개수 미리 체크(합집합 개수에 사용)
-    }
-
-    for (int i = 0; i < (int)str2.size(); i++) {
-        for (int j = 0; j < (int)str1.size(); j++) {
-            if ((!strcmp(strSet1[j].c_str(), strSet2[i].c_str())) && (strSet1[j] != "")) { // 교집합 개수 체크
-                strSet1[j] = "X"; // 한번 체크한 문자열은 X로 만들어 또 체크하지 않도록 함
-                intersectionNum++;
-                break;
-            }
-            else if (j == ((int)str1.size() - 1) && (strSet2[i] != "")) unionNum++; // 합집합 개수 체크
+    for(int i=0;i<strSet1.size();i++){
+        for(int j=0;j<strSet2.size();j++){
+            if(strSet1[i] == strSet2[j]) interSet.push_back(strSet2[j]);
         }
     }
-    cout << "\n합집합 수 : " << unionNum << " 교집합 수 : " << intersectionNum << endl;
+    unionSet.insert(unionSet.end(),strSet1.begin(),strSet1.end());
+    unionSet.insert(unionSet.end(),strSet2.begin(),strSet2.end());
+
+    unionSet.erase(unique(unionSet.begin(),unionSet.end()),unionSet.end());
+    interSet.erase(unique(interSet.begin(),interSet.end()),interSet.end());
+
+    return interSet.size()/unionSet.size();
 
 }
 
-//int Jaccard::jaccard(string str1, string str2)
-//{
-//    int answer = 0;
-//    vector <string> devideStr1(str1.size());
-//    vector <string> devideStr2(str2.size());
-//
-//    // 1. 문자열 두개씩 쪼개기 단, 모두 숫자여야 저장
-//    int saveNum = 0;
-//    for (int i = 0; i < (int)str1.size() - 1; i++) {
-//        char temp[3] = { 0, };
-//        temp[0] = str1[i];
-//        temp[1] = str1[i + 1];
-//
-//        if (((temp[0] >= 'A' && temp[0] <= 'Z') || (temp[0] >= 'a' && temp[0] <= 'z'))
-//            && ((temp[1] >= 'A' && temp[1] <= 'Z') || (temp[1] >= 'a' && temp[1] <= 'z'))) devideStr1[saveNum++] = temp;
-//    }
-//
-//    saveNum = 0;
-//    for (int i = 0; i < (int)str2.size() - 1; i++) {
-//        char temp[3] = { 0, };
-//        temp[0] = str2[i];
-//        temp[1] = str2[i + 1];
-//
-//        if (((temp[0] >= 'A' && temp[0] <= 'Z') || (temp[0] >= 'a' && temp[0] <= 'z'))
-//            && ((temp[1] >= 'A' && temp[1] <= 'Z') || (temp[1] >= 'a' && temp[1] <= 'z'))) devideStr2[saveNum++] = temp;
-//    }
-//
-//    cout << "str1 쪼갠거 : ";
-//    for (int i = 0; i < (int)str1.size(); i++) cout << devideStr1[i] << "  ";
-//    cout << "\nstr2 쪼갠거 : ";
-//    for (int i = 0; i < (int)str2.size(); i++) cout << devideStr2[i] << "  ";
-//
-//    // 2. 합집합, 교집합 체크
-//    int unionNum = 0;     // 합집합 개수
-//    int intersectionNum = 0;  // 교집합 개수
-//
-//    for (int i = 0; i < (int)str1.size(); i++) {
-//        if (devideStr1[i] != "") unionNum++; // str1의 원소개수 미리 체크(합집합 개수에 사용)
-//    }
-//
-//    for (int i = 0; i < (int)str2.size(); i++) {
-//        for (int j = 0; j < (int)str1.size(); j++) {
-//            if ((!_stricmp(devideStr1[j].c_str(), devideStr2[i].c_str())) && (devideStr1[j] != "")) { // 교집합 개수 체크
-//                devideStr1[j] = "X"; // 한번 체크한 문자열은 X로 만들어 또 체크하지 않도록 함
-//                intersectionNum++;
-//                break;
-//            }
-//            else if (j == ((int)str1.size() - 1) && (devideStr2[i] != "")) unionNum++; // 합집합 개수 체크
-//        }
-//    }
-//
-//    cout << "\n합집합 수 : " << unionNum << " 교집합 수 : " << intersectionNum << endl;
-//
-//    // 3. 결과 출력(자카드 유사도)
-//    float tempAnswer = 0;
-//    if (intersectionNum == 0 && unionNum == 0) tempAnswer = 1;
-//    else tempAnswer = (float)intersectionNum / unionNum;
-//
-//    answer = (int)(tempAnswer * 65536);
-//    return answer;
-//}
 
 void Jaccard::run(int num)
 {

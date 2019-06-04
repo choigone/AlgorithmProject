@@ -27,4 +27,6 @@ struct similText {
     double similarity;
 };
 
+const char* CHARS_TO_REMOVE = ".,:;\"()";
+
 #endif //PROJECT_UTILITY_H

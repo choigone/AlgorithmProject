@@ -7,9 +7,6 @@
 
 #include "utility.h"
 
-
-const char* CHARS_TO_REMOVE = ".,:;\"()";
-
 class Jaccard {
     vector<similText> text;
 public:

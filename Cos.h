@@ -10,7 +10,6 @@
 const int MAX_STOPWORDS = 200;
 const int MAX_TOKENS = 400;
 const int MAX_FILES = 300;
-const char* CHARS_TO_REMOVE = ".,:;\"()";
 
 class Cos {
     vector<similText> text;

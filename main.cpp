@@ -2,6 +2,8 @@
 #include "Datas.h"
 #include "Search.h"
 #include "Cos.h"
+#include "Jaccard.h"
+#include "Levenshtein.h"
 
 int main() {
     ifstream in;
@@ -24,15 +26,21 @@ int main() {
     search.search();
     search.printResult();
 
-    //각 알고리즘 -> 생성자 매개변수 : search.getResult();
-    Cos cosAlgo = Cos(search.getResult());
     //TODO 이부분도 어떤 함수에 넣는 게 낫겠는데..?!
     int num;
     cout << "볼 기사의 번호 : ";
     cin >> num;
+
+    //각 알고리즘 -> 생성자 매개변수 : search.getResult();
+    //TODO 결과 출력하는 것도 코드 작성해서 추가해야 함 !
+    Cos cosAlgo = Cos(search.getResult());
     cosAlgo.run(num);
 
-
+    Jaccard jaccardAlgo = Jaccard(search.getResult());
+    jaccardAlgo.run(num);
+    
+    Levenshtein levenshAlgo = Levenshtein(search.getResult());
+    levenshAlgo.run(num);
 
 
     return 0;

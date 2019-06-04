@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/project.dir/KMP.cpp.o"
   "CMakeFiles/project.dir/Cos.cpp.o"
   "CMakeFiles/project.dir/Jaccard.cpp.o"
+  "CMakeFiles/project.dir/Levenshtein.cpp.o"
   "project.pdb"
   "project"
 )

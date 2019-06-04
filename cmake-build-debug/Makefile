@@ -231,6 +231,33 @@ KMP.cpp.s:
 	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/KMP.cpp.s
 .PHONY : KMP.cpp.s
 
+Levenshtein.o: Levenshtein.cpp.o
+
+.PHONY : Levenshtein.o
+
+# target to build an object file
+Levenshtein.cpp.o:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Levenshtein.cpp.o
+.PHONY : Levenshtein.cpp.o
+
+Levenshtein.i: Levenshtein.cpp.i
+
+.PHONY : Levenshtein.i
+
+# target to preprocess a source file
+Levenshtein.cpp.i:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Levenshtein.cpp.i
+.PHONY : Levenshtein.cpp.i
+
+Levenshtein.s: Levenshtein.cpp.s
+
+.PHONY : Levenshtein.s
+
+# target to generate assembly for a file
+Levenshtein.cpp.s:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Levenshtein.cpp.s
+.PHONY : Levenshtein.cpp.s
+
 Search.o: Search.cpp.o
 
 .PHONY : Search.o
@@ -306,6 +333,9 @@ help:
 	@echo "... KMP.o"
 	@echo "... KMP.i"
 	@echo "... KMP.s"
+	@echo "... Levenshtein.o"
+	@echo "... Levenshtein.i"
+	@echo "... Levenshtein.s"
 	@echo "... Search.o"
 	@echo "... Search.i"
 	@echo "... Search.s"

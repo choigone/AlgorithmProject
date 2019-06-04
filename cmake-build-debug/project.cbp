@@ -104,6 +104,12 @@
 		<Unit filename="/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/KMP.h">
 			<Option target="project"/>
 		</Unit>
+		<Unit filename="/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/Levenshtein.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/Levenshtein.h">
+			<Option target="project"/>
+		</Unit>
 		<Unit filename="/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/Search.cpp">
 			<Option target="project"/>
 		</Unit>
