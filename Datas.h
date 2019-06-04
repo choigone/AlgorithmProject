@@ -13,7 +13,7 @@ private:
     vector<string> articles;
 public:
     void setArticles(string str);
-
+    vector<string> getArticles();
 };
 
 #endif //PROJECT_DATAS_H

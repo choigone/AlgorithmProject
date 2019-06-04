@@ -7,4 +7,16 @@
 
 #include "utility.h"
 
+class KMP{
+private:
+    string text;
+    string target;
+    int *SP;
+public:
+    KMP(string text,string target);
+    void setText(string text);
+    int initSP(string target);
+    int kmpSearch();
+};
+
 #endif //PROJECT_KMP_H

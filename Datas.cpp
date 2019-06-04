@@ -7,3 +7,7 @@
 void Datas::setArticles(string str) {
     this->articles.push_back(str);
 }
+
+vector<string> Datas::getArticles() {
+    return articles;
+}

@@ -1,4 +1,4 @@
-# Install script for directory: /Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/project
+# Install script for directory: /Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/project/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

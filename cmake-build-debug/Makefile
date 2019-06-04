@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/project
+CMAKE_SOURCE_DIR = /Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/project/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/project/cmake-build-debug/CMakeFiles /Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/project/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/cmake-build-debug/CMakeFiles /Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/project/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,6 +123,33 @@ project/fast:
 	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/build
 .PHONY : project/fast
 
+Cos.o: Cos.cpp.o
+
+.PHONY : Cos.o
+
+# target to build an object file
+Cos.cpp.o:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Cos.cpp.o
+.PHONY : Cos.cpp.o
+
+Cos.i: Cos.cpp.i
+
+.PHONY : Cos.i
+
+# target to preprocess a source file
+Cos.cpp.i:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Cos.cpp.i
+.PHONY : Cos.cpp.i
+
+Cos.s: Cos.cpp.s
+
+.PHONY : Cos.s
+
+# target to generate assembly for a file
+Cos.cpp.s:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Cos.cpp.s
+.PHONY : Cos.cpp.s
+
 Datas.o: Datas.cpp.o
 
 .PHONY : Datas.o
@@ -149,6 +176,33 @@ Datas.s: Datas.cpp.s
 Datas.cpp.s:
 	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Datas.cpp.s
 .PHONY : Datas.cpp.s
+
+Jaccard.o: Jaccard.cpp.o
+
+.PHONY : Jaccard.o
+
+# target to build an object file
+Jaccard.cpp.o:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Jaccard.cpp.o
+.PHONY : Jaccard.cpp.o
+
+Jaccard.i: Jaccard.cpp.i
+
+.PHONY : Jaccard.i
+
+# target to preprocess a source file
+Jaccard.cpp.i:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Jaccard.cpp.i
+.PHONY : Jaccard.cpp.i
+
+Jaccard.s: Jaccard.cpp.s
+
+.PHONY : Jaccard.s
+
+# target to generate assembly for a file
+Jaccard.cpp.s:
+	$(MAKE) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/Jaccard.cpp.s
+.PHONY : Jaccard.cpp.s
 
 KMP.o: KMP.cpp.o
 
@@ -240,9 +294,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... project"
+	@echo "... Cos.o"
+	@echo "... Cos.i"
+	@echo "... Cos.s"
 	@echo "... Datas.o"
 	@echo "... Datas.i"
 	@echo "... Datas.s"
+	@echo "... Jaccard.o"
+	@echo "... Jaccard.i"
+	@echo "... Jaccard.s"
 	@echo "... KMP.o"
 	@echo "... KMP.i"
 	@echo "... KMP.s"

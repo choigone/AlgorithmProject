@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/project/cmake-build-debug"/>
+				<Option working_dir="/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/project/cmake-build-debug"/>
+				<Option working_dir="/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/project/cmake-build-debug"/>
+				<Option working_dir="/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="project">
-				<Option output="/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/project/cmake-build-debug/project" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/project/cmake-build-debug"/>
+				<Option output="/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/cmake-build-debug/project" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -52,15 +52,15 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 project"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 project"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="project/fast">
-				<Option output="/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/project/cmake-build-debug/project" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/project/cmake-build-debug"/>
+				<Option output="/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/cmake-build-debug/project" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -73,38 +73,50 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 project/fast"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 project/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/project/Datas.cpp">
+		<Unit filename="/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/Cos.cpp">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/project/Datas.h">
+		<Unit filename="/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/Cos.h">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/project/KMP.cpp">
+		<Unit filename="/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/Datas.cpp">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/project/KMP.h">
+		<Unit filename="/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/Datas.h">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/project/Search.cpp">
+		<Unit filename="/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/Jaccard.cpp">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/project/Search.h">
+		<Unit filename="/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/Jaccard.h">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/project/main.cpp">
+		<Unit filename="/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/KMP.cpp">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/project/utility.h">
+		<Unit filename="/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/KMP.h">
 			<Option target="project"/>
 		</Unit>
-		<Unit filename="/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/project/CMakeLists.txt">
+		<Unit filename="/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/Search.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/Search.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/main.cpp">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/utility.h">
+			<Option target="project"/>
+		</Unit>
+		<Unit filename="/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/프로젝트/AlgorithmProject/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

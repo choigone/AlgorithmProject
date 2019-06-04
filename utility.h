@@ -12,11 +12,19 @@ using namespace std;
 #include <fstream>
 #include <vector>
 #include <string>
-
-//header
-#include "Datas.h"
+#include <algorithm>
+#include <cmath>
+#include <fstream>
+#include <iostream>
+#include <sstream>
+#include <functional>
 
 //constants
-#define FILENAME "/Users/gounchoi/Desktop/동대생최고운/3학년1학기/컴퓨터알고리즘과실습/project/input.txt"
+#define FILENAME "//Users/gounchoi/Desktop/AlgorithmProject/input.txt"
+
+struct similText {
+    string text;
+    double similarity;
+};
 
 #endif //PROJECT_UTILITY_H
