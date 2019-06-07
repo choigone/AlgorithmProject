@@ -14,7 +14,7 @@ public:
     void preprocess(string& text);
     int jaccard(string str1, string str2);
     void run(int num);
-    void removeTemp();
+    void removeTemp(string str);
     string getStrCutByLength(string str, int maxLength);
 };
 

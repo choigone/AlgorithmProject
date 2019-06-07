@@ -23,11 +23,8 @@ void Jaccard::preprocess(string & text)
     transform(text.begin(), text.end(), text.begin(), tolower);
 }
 
-void Jaccard::removeTemp() {
-    string temp;
-    for(int i=0;i<text.size();i++){
-        (text[i].text).erase(remove_if((text[i].text).begin(), (text[i].text).end(), isspace), (text[i].text).end());
-    }
+void Jaccard::removeTemp(string str) {
+    str.erase(remove_if(str.begin(), str.end(), isspace), str.end());
 }
 
 string getStrCutByLength(string str, int maxLength){ // 잘라낼 문자열 및 반환받을 "절대 길이"를 인자로 가져옴.{
@@ -60,6 +57,7 @@ string getStrCutByLength(string str, int maxLength){ // 잘라낼 문자열 및 
 }
 
 int Jaccard::jaccard(string str1, string str2) {
+    removeTemp(str1);
     vector<string> strSet1;
     vector<string> strSet2;
     vector<string> unionSet;
@@ -97,7 +95,6 @@ void Jaccard::run(int num)
 {
     string text1 = text[num].text;
     preprocess(text1);
-    removeTemp();
 
     int i = 0;
 
