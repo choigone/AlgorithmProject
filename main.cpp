@@ -1,47 +1,52 @@
-#include "utility.h"
+
 #include "Datas.h"
-#include "Search.h"
 #include "Cos.h"
 #include "Jaccard.h"
 #include "Levenshtein.h"
+#include "UI.h"
+#include "Search.h"
+
+#define FILENAME "D:/3ÇĞ³â1ÇĞ±â/ÄÄ¾Ë/ÇÁ·ÎÁ§Æ®/Project/Project/input.txt"
+using namespace std;
 
 int main() {
-    ifstream in;
-    in.open(FILENAME);
-    Datas data;
+	ifstream in;
+	in.open(FILENAME);
+	Datas data = Datas();
+	string buf;
+	if (!in.is_open()) {
+		cout << "ÆÄÀÏÀ» ¿­ ¼ö ¾ø½À´Ï´Ù.";
+		exit(1);
+	}
+	cout << "ÆÄÀÏÀ» ¿©´Â °Í¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.";
+	while (!in.eof()) {
+		getline(in, buf);
+		data.setArticles(buf);
+	}
 
-    string buf;
-    if(!in.is_open()){
-        cout << "íŒŒì¼ì„ ì—´ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.";
-        exit(1);
-    }
-    cout << "íŒŒì¼ì„ ì—¬ëŠ” ê²ƒì— ì„±ê³µí•˜ì˜€ìŠµë‹ˆë‹¤.";
-    while(!in.eof()){
-        getline(in,buf);
-        data.setArticles(buf);
-    }
+	//Start_menu(); //Ã¹È­¸é
+	Search search = Search(data);
+	search.getTarget();
+	//void keywordInputPage2();
+	search.search();
+	search.printResult();
 
-    Search search = Search(data);
-    search.getTarget();
-    search.search();
-    search.printResult();
+	//TODO ÀÌºÎºĞµµ ¾î¶² ÇÔ¼ö¿¡ ³Ö´Â °Ô ³´°Ú´Âµ¥..?!
+	int num;
+	cout << "º¼ ±â»çÀÇ ¹øÈ£ : ";
+	cin >> num;
 
-    //TODO ì´ë¶€ë¶„ë„ ì–´ë–¤ í•¨ìˆ˜ì— ë„£ëŠ” ê²Œ ë‚«ê² ëŠ”ë°..?!
-    int num;
-    cout << "ë³¼ ê¸°ì‚¬ì˜ ë²ˆí˜¸ : ";
-    cin >> num;
+	//°¢ ¾Ë°í¸®Áò -> »ı¼ºÀÚ ¸Å°³º¯¼ö : search.getResult();
+	//TODO °á°ú Ãâ·ÂÇÏ´Â °Íµµ ÄÚµå ÀÛ¼ºÇØ¼­ Ãß°¡ÇØ¾ß ÇÔ !
+	Cos cosAlgo = Cos(search.getResult());
+	cosAlgo.run(num);
 
-    //ê° ì•Œê³ ë¦¬ì¦˜ -> ìƒì„±ì ë§¤ê°œë³€ìˆ˜ : search.getResult();
-    //TODO ê²°ê³¼ ì¶œë ¥í•˜ëŠ” ê²ƒë„ ì½”ë“œ ì‘ì„±í•´ì„œ ì¶”ê°€í•´ì•¼ í•¨ !
-    Cos cosAlgo = Cos(search.getResult());
-    cosAlgo.run(num);
+	Jaccard jaccardAlgo = Jaccard(search.getResult());
+	jaccardAlgo.run(num);
 
-    Jaccard jaccardAlgo = Jaccard(search.getResult());
-    jaccardAlgo.run(num);
-    
-    Levenshtein levenshAlgo = Levenshtein(search.getResult());
-    levenshAlgo.run(num);
+	Levenshtein levenshAlgo = Levenshtein(search.getResult());
+	levenshAlgo.run(num);
 
-
-    return 0;
+	system("pause");
+	return 0;
 }

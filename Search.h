@@ -1,26 +1,16 @@
-//
-// Created by Goun Choi on 2019-05-31.
-//
-
-#ifndef PROJECT_SEARCH_H
-#define PROJECT_SEARCH_H
-
-#include "utility.h"
-#include "KMP.h"
 #include "Datas.h"
+#include "KMP.h"
 
-class Search{
+class Search {
 private:
-    Datas data;
-    string target;
-    vector<similText> result;
-    KMP kmp = KMP(NULL,target);
+	Datas data;
+	string target;
+	vector<pair<double, string>> result;
+	KMP kmp = KMP("",target);
 public:
-    Search(Datas d);
-    void search();
-    void getTarget();
-    vector<similText> getResult();
-    void printResult();
+	Search(Datas d);
+	void search();
+	void getTarget();
+	vector<pair<double, string>> getResult();
+	void printResult();
 };
-
-#endif //PROJECT_SEARCH_H

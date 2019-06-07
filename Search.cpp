@@ -5,32 +5,31 @@
 #include "Search.h"
 
 Search::Search(Datas d) {
-    this->data = d;
+	this->data = d;
 }
 
 void Search::search() {
-    similText temp;
-    temp.similarity = -1;
-    for(int i=0;i<data.getArticles().size();i++){
-        kmp.setText(data.getArticles()[i]);
-        if(kmp.kmpSearch()){
-            temp.text = data.getArticles()[i];
-            this->result.push_back(temp);
-        }
-    }
+	for (int i = 0; i < data.getArticles().size(); i++) {
+		kmp.setText(data.getArticles()[i]);
+		if (kmp.kmpSearch()) {
+			this->result.push_back(make_pair(-1, data.getArticles()[i]));
+		}
+	}
 }
 
 void Search::getTarget() {
-    cout << "ê²€ìƒ‰í•  ë¬¸ìžì—´ì„ ìž…ë ¥í•˜ì„¸ìš” : ";
-    cin >> this->target;
+	cout << "\n°Ë»öÇÒ ¹®ÀÚ¿­À» ÀÔ·ÂÇÏ¼¼¿ä : ";
+	string temp;
+	cin >> temp;
+	kmp.setTarget(temp);
 }
 
-vector<similText> Search::getResult() {
-    return result;
+vector<pair<double,string>> Search::getResult() {
+	return result;
 }
 
 void Search::printResult() {
-    for(int i=0;i<result.size();i++){
-        cout << result[i].text << endl;
-    }
+	for (int i = 0; i < result.size(); i++) {
+		cout << result[i].second << endl;
+	}
 }

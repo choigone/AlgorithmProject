@@ -4,105 +4,99 @@
 
 #include "Jaccard.h"
 
-bool CompareSimil(const similText& x, const similText& y) {
-    return x.similarity > y.similarity;
-}
-
-Jaccard::Jaccard(vector<similText> text)
+Jaccard::Jaccard(vector<pair<double, string>> text)
 {
-    this->text = text;
+	this->text = text;
 }
 
 void Jaccard::preprocess(string & text)
 {
-    for (int i = 0; CHARS_TO_REMOVE[i]; ++i) {
-        text.erase(
-                remove(text.begin(), text.end(), CHARS_TO_REMOVE[i]),
-                text.end());
-    }
-    transform(text.begin(), text.end(), text.begin(), tolower);
+	for (int i = 0; CHARS_TO_REMOVE2[i]; ++i) {
+		text.erase(remove(text.begin(), text.end(), CHARS_TO_REMOVE2[i]), text.end());
+	}
+	transform(text.begin(), text.end(), text.begin(), tolower);
 }
 
 void Jaccard::removeTemp(string str) {
-    str.erase(remove_if(str.begin(), str.end(), isspace), str.end());
+	str.erase(remove_if(str.begin(), str.end(), isspace), str.end());
 }
 
-string getStrCutByLength(string str, int maxLength){ // ì˜ë¼ë‚¼ ë¬¸ìì—´ ë° ë°˜í™˜ë°›ì„ "ì ˆëŒ€ ê¸¸ì´"ë¥¼ ì¸ìë¡œ ê°€ì ¸ì˜´.{
-    auto itr = str.begin();
-    if(str.length() > (maxLength * 3)) // ì´ ì•ˆì— ë“¤ì–´ê°„ë‹¤ë©´ 2ë°”ì´íŠ¸ ì´ìƒì„ ê°€ì§„ ë¬¸ìê°€ ë¬¸ìì—´ì— í¬í•¨ë˜ì–´ ìˆë‹¤.
-    {
-        int len = 0;
-        while(itr != str.end())
-        {
-            if( len > (maxLength * 2) - 1 ) // í•œê¸€ì„ 2ë°”ì´íŠ¸ë¡œ ì·¨ê¸‰í•˜ê³  ì‹¶ìœ¼ë‹ˆê¹Œ * 2 ë¡œ í™•ì¸
-            {
-                return str.substr(0, std::distance(str.begin(),itr)); // ë°›ì•„ì˜¨ ì ˆëŒ€ ê¸¸ì´ë§Œí¼ ì˜ë¼ë‚´ê³  ë’¤ì— ...ì„ ë¶™ì¸ ë’¤ ë°˜í™˜
-            }
+string Jaccard::getStrCutByLength(string str, int maxLength) { // Àß¶ó³¾ ¹®ÀÚ¿­ ¹× ¹İÈ¯¹ŞÀ» "Àı´ë ±æÀÌ"¸¦ ÀÎÀÚ·Î °¡Á®¿È.
+	auto itr = str.begin();
+	if (str.length() > (maxLength * 3)) // ÀÌ ¾È¿¡ µé¾î°£´Ù¸é 2¹ÙÀÌÆ® ÀÌ»óÀ» °¡Áø ¹®ÀÚ°¡ ¹®ÀÚ¿­¿¡ Æ÷ÇÔµÇ¾î ÀÖ´Ù.
+	{
+		int len = 0;
+		while (itr != str.end())
+		{
+			if (len > (maxLength * 2) - 1) // ÇÑ±ÛÀ» 2¹ÙÀÌÆ®·Î Ãë±ŞÇÏ°í ½ÍÀ¸´Ï±î * 2 ·Î È®ÀÎ
+			{
+				return str.substr(0, std::distance(str.begin(), itr)); // ¹Ş¾Æ¿Â Àı´ë ±æÀÌ¸¸Å­ Àß¶ó³»°í µÚ¿¡ ...À» ºÙÀÎ µÚ ¹İÈ¯
+			}
 
-            unsigned char c = *itr; // ìŒìˆ˜ ì œê±°
+			unsigned char c = *itr; // À½¼ö Á¦°Å
 
-            if( c > 128 ) // ì•„ìŠ¤í‚¤ ê¸°ë³¸ í‘œí˜„ê°’ì„ ë²—ì–´ë‚  ê²½ìš°
-            {
-                itr += 2; // 2ë°”ì´íŠ¸ ë’¤ë¡œ ë„˜ê¸°ë©´ì„œ
-                ++len; // ê¸¸ì´ê°’ì„ 1 ëŠ˜ë¦¼.
-            }
+			if (c > 128) // ¾Æ½ºÅ° ±âº» Ç¥Çö°ªÀ» ¹ş¾î³¯ °æ¿ì
+			{
+				itr += 2; // 2¹ÙÀÌÆ® µÚ·Î ³Ñ±â¸é¼­
+				++len; // ±æÀÌ°ªÀ» 1 ´Ã¸².
+			}
 
-            ++itr; // ê·¸ ì™¸ì—ë„ 1ë°”ì´íŠ¸ ë’¤ë¡œ ë„˜ê¸°ë©´ì„œ (ìœ„ì—ì„œ ê±¸ë ¸ìœ¼ë©´ ì´ 3ë°”ì´íŠ¸)
-            ++len; // ê¸¸ì´ê°’ì„ 1 ë”
-        }
+			++itr; // ±× ¿Ü¿¡µµ 1¹ÙÀÌÆ® µÚ·Î ³Ñ±â¸é¼­ (À§¿¡¼­ °É·ÈÀ¸¸é ÃÑ 3¹ÙÀÌÆ®)
+			++len; // ±æÀÌ°ªÀ» 1 ´õ
+		}
 
-    }
+	}
 
-    return str;
+	return str;
 }
 
 int Jaccard::jaccard(string str1, string str2) {
-    removeTemp(str1);
-    vector<string> strSet1;
-    vector<string> strSet2;
-    vector<string> unionSet;
-    vector<string> interSet;
+	removeTemp(str1);
+	vector<string> strSet1;
+	vector<string> strSet2;
+	vector<string> unionSet;
+	vector<string> interSet;
 
-    string temp;
-    cout << temp;
-    for(int i=0;i<str1.length()/3 - 1;i++){
-        temp = getStrCutByLength(str1.substr(i*3),2);
-        strSet1.push_back(temp);
-    }
+	string temp;
+	cout << temp;
+	for (int i = 0; i < str1.length() / 3 - 1; i++) {
+		temp = getStrCutByLength(str1.substr(i * 3), 2);
+		strSet1.push_back(temp);
+	}
 
-    for(int i=0;i<str2.length()/3 - 1;i++){
-        temp = getStrCutByLength(str2.substr(i*3),2);
-        strSet2.push_back(temp);
-    }
+	for (int i = 0; i < str2.length() / 3 - 1; i++) {
+		temp = getStrCutByLength(str2.substr(i * 3), 2);
+		strSet2.push_back(temp);
+	}
 
-    for(int i=0;i<strSet1.size();i++){
-        for(int j=0;j<strSet2.size();j++){
-            if(strSet1[i] == strSet2[j]) interSet.push_back(strSet2[j]);
-        }
-    }
-    unionSet.insert(unionSet.end(),strSet1.begin(),strSet1.end());
-    unionSet.insert(unionSet.end(),strSet2.begin(),strSet2.end());
+	for (int i = 0; i < strSet1.size(); i++) {
+		for (int j = 0; j < strSet2.size(); j++) {
+			if (strSet1[i] == strSet2[j]) interSet.push_back(strSet2[j]);
+		}
+	}
+	unionSet.insert(unionSet.end(), strSet1.begin(), strSet1.end());
+	unionSet.insert(unionSet.end(), strSet2.begin(), strSet2.end());
 
-    unionSet.erase(unique(unionSet.begin(),unionSet.end()),unionSet.end());
-    interSet.erase(unique(interSet.begin(),interSet.end()),interSet.end());
+	unionSet.erase(unique(unionSet.begin(), unionSet.end()), unionSet.end());
+	interSet.erase(unique(interSet.begin(), interSet.end()), interSet.end());
 
-    return interSet.size()/unionSet.size();
+	return interSet.size() / unionSet.size();
 
 }
 
 
 void Jaccard::run(int num)
 {
-    string text1 = text[num].text;
-    preprocess(text1);
+	string text1 = text[num].second;
+	preprocess(text1);
 
-    int i = 0;
+	int i = 0;
 
-    while (i < text.size()) {
-        string text2 = text[i].text;
-        preprocess(text2);
-        text[i].similarity = jaccard(text1, text2);
-        i++;
-    }
-    sort(text.begin(), text.end(), CompareSimil);
+	while (i < text.size()) {
+		string text2 = text[i].second;
+		preprocess(text2);
+		text[i].first = jaccard(text1, text2);
+		i++;
+	}
+	sort(text.begin(), text.end());
 }

@@ -5,17 +5,27 @@
 #ifndef PROJECT_JACCARD_H
 #define PROJECT_JACCARD_H
 
-#include "utility.h"
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <string>
+#include <algorithm>
+#include <cmath>
+#include <iostream>
+#include <sstream>
+#include <functional>
+using namespace std;
 
 class Jaccard {
-    vector<similText> text;
+	vector<pair<double, string>> text;
 public:
-    Jaccard(vector<similText> text);
-    void preprocess(string& text);
-    int jaccard(string str1, string str2);
-    void run(int num);
-    void removeTemp(string str);
-    string getStrCutByLength(string str, int maxLength);
+	const char* CHARS_TO_REMOVE2 = ".,:;\"()";
+	Jaccard(vector<pair<double, string>> text);
+	void preprocess(string& text);
+	int jaccard(string str1, string str2);
+	void run(int num);
+	void removeTemp(string str);
+	string getStrCutByLength(string str, int maxLength);
 };
 
 #endif //PROJECT_JACCARD_H
