@@ -19,11 +19,13 @@ using namespace std;
 class Levenshtein {
 	vector<pair<double, string>> text;
 public:
+	int dist[65][65];
 	const char* CHARS_TO_REMOVE1 = ".,:;\"()";
 	Levenshtein(vector<pair<double, string>> text);
 	void preprocess(string& text);
 	int levenshtein(string& input1, string& input2);
 	void run(int num);
+	void getVector();
 };
 
 #endif //PROJECT_LEVENSHTEIN_H

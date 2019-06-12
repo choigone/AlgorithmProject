@@ -53,7 +53,6 @@ int KMP::kmpSearch() {
 		}
 
 		if (j == m - 1) return 1;
-	
 	}
 	return 0;
 }

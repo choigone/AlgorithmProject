@@ -32,6 +32,7 @@ public:
 	double magnitude(int* v, int size);
 	double cosineSimilarity(string* tokens1, int tokens1Size, string* tokens2, int tokens2Size);
 	void run(int num);
+	void getVector();
 };
 
 #endif //PROJECT_COSALGO_H

@@ -18,7 +18,8 @@ void Search::search() {
 }
 
 void Search::getTarget() {
-	cout << "\n검색할 문자열을 입력하세요 : ";
+	void keywordInputPage1();
+	//cout << "\n검색할 문자열을 입력하세요 : ";
 	string temp;
 	cin >> temp;
 	kmp.setTarget(temp);
@@ -29,7 +30,8 @@ vector<pair<double,string>> Search::getResult() {
 }
 
 void Search::printResult() {
+	//void keywordInputPage2();
 	for (int i = 0; i < result.size(); i++) {
-		cout << result[i].second << endl;
+		cout << "        "<<i+1<<". "<<result[i].second << endl;
 	}
 }

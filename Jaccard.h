@@ -22,10 +22,11 @@ public:
 	const char* CHARS_TO_REMOVE2 = ".,:;\"()";
 	Jaccard(vector<pair<double, string>> text);
 	void preprocess(string& text);
-	int jaccard(string str1, string str2);
+	double jaccard(string str1, string str2);
 	void run(int num);
-	void removeTemp(string str);
+	void removeTemp(string& str);
 	string getStrCutByLength(string str, int maxLength);
+	void getVector();
 };
 
 #endif //PROJECT_JACCARD_H

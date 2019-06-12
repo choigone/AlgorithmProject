@@ -3,6 +3,7 @@
 //
 
 #include "Cos.h"
+#include<iomanip>
 
 
 Cos::Cos(vector<pair<double, string>> text) {
@@ -105,4 +106,21 @@ void Cos::run(int num) {
 		i++;
 	}
 	sort(text.begin(), text.end());
+}
+
+void Cos::getVector()
+{
+	cout << endl;
+	cout << "  ◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈ " << endl << endl;
+	cout << "    선택한 기사 : "; cout << text[text.size() - 1].second; cout << endl<<endl;
+	cout << "  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" << endl;
+	
+	cout << "    < Cosine Similarity >" << endl<<endl;
+	for (int i = text.size()-2; i >= 0; i--)
+	{
+		//cout<<"    "<<text[i].second<<endl<<text[i].first<<endl;
+		cout << setw(10) << left<<text[i].first;
+		cout << text[i].second << endl;
+	}
+	cout << endl << endl;
 }
